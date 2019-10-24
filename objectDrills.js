@@ -14,7 +14,7 @@ function problemOne() {
     let loaf = {
         flour: 300,
         water: 210,
-        hydration: function() {
+        hydration() {
             return this.water/this.flour * 100;
         }
     }
@@ -50,7 +50,6 @@ function problemThree() {
     }
 
     console.log(obj["meals"][3]);
-
 }
 
 function problemFour() {
@@ -136,10 +135,10 @@ function problemSeven() {
         return character.nickname === 'aragorn';
     }).describe();
     let hobbitArray = characters.filter(character => {
-        character.race === 'Hobbit';
+        return character.race === 'Hobbit';
     });
     let atkAboveFiveArray = characters.filter(character => {
-        character.attack > 5;
+        return character.attack > 5;
     });
 
     function createCharacter(name, nickname, race, origin, attack, defense, weapon) {
@@ -162,3 +161,5 @@ function problemSeven() {
         };
     }
 }
+
+// function createCharacter({ name, nickname, race, origin, attack, defense, weapon })
